@@ -1,23 +1,20 @@
 package main
 
-import "fmt"
-
-type endereco struct {
-	rua    string
-	numero string
-	cidade string
-}
+import (
+	"fmt"
+	"go-udemy/model"
+)
 
 func main() {
 	fmt.Println("Iniciando...")
 
-	endereco := endereco{
-		rua:    "Rua",
-		numero: "123",
-		cidade: "Campinas",
+	endereco := model.Endereco{
+		Rua:    "Rua",
+		Numero: "123",
+		Cidade: "Campinas",
 	}
 
 	fmt.Println(endereco)
-	endereco.numero = "12302"
-	fmt.Println(endereco.numero)
+	endereco.Numero = "12302"
+	fmt.Println(endereco.Numero)
 }
