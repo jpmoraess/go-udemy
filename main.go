@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	/**
 	################ SECAO 1: FUNDAMENTOS ################
@@ -306,6 +308,7 @@ func main() {
 		fmt.Println(soma, subtracao, multiplicacao, divisao)
 	*/
 
+	fmt.Println("GO LANG 2")
 }
 
 /*
