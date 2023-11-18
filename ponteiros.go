@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main3() {
 	x := 5
 	y := &x
 	*y = 10

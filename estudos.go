@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main2() {
 	/**
 	################ SECAO 1: FUNDAMENTOS ################
 	**/
