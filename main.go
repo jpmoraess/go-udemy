@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go-udemy/model"
+	"time"
 )
 
 func main() {
@@ -15,12 +16,14 @@ func main() {
 	}
 
 	pessoa := model.Pessoa{
-		Nome:     "João Pedro",
-		Endereco: endereco,
+		Nome:           "João Pedro",
+		Endereco:       endereco,
+		DataNascimento: time.Date(1997, 3, 6, 20, 10, 0, 0, time.Local),
 	}
 
 	fmt.Println(pessoa)
 	fmt.Println(endereco)
-	endereco.Numero = "12302"
-	fmt.Println(endereco.Numero)
+	idade := model.CalculaIdade(pessoa)
+	idade = pessoa.IdadeAtual()
+	fmt.Println(idade)
 }
