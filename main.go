@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	/**
 	################ SECAO 1: FUNDAMENTOS ################
@@ -303,9 +301,22 @@ func main() {
 		fmt.Println("Resultado:", resultado)
 	*/
 
-	soma, subtracao, multiplicacao, divisao := Operacao(10, 5)
-	fmt.Println(soma, subtracao, multiplicacao, divisao)
+	/*
+		soma, subtracao, multiplicacao, divisao := Operacao(10, 5)
+		fmt.Println(soma, subtracao, multiplicacao, divisao)
+	*/
+
 }
+
+/*
+func init() {
+	fmt.Println("Função init [1]")
+}
+
+func init() {
+	fmt.Println("Função init [2]")
+}
+*/
 
 /*
 func Operacao(num1 int, num2 int) (int, int, int, int) {
@@ -317,6 +328,7 @@ func Operacao(num1 int, num2 int) (int, int, int, int) {
 }
 */
 
+/*
 func Operacao(num1 int, num2 int) (soma int, subtracao int, multiplicacao int, divisao int) {
 	soma = num1 + num2
 	subtracao = num1 - num2
@@ -324,12 +336,17 @@ func Operacao(num1 int, num2 int) (soma int, subtracao int, multiplicacao int, d
 	divisao = num1 / num2
 	return
 }
+*/
 
+/*
 func Soma(num1 int, num2 int) int {
 	return num1 + num2
 }
+*/
 
+/*
 func ImprimeMensagem(mensagem string) {
 	mensagem += "!!!"
 	fmt.Println(mensagem)
 }
+*/
