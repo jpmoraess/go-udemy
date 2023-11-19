@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math"
-	"errors"
 )
 
 
@@ -61,12 +60,30 @@ func (p ProblemaDeNetwork) Error() string {
 }
 
 func main() {
-	ExibeError(errors.New("error"))
-
-	p := ProblemaDeNetwork{
-		Rede: true,
-		Hardware: false,
+	var a interface{}
+	a = Circulo{
+		Radius: 10,
 	}
+	fmt.Println(a)
 
-	ExibeError(p)
+	var lista []interface{}
+	lista = append(lista, 10)
+	lista = append(lista, Circulo{
+		Radius: 10,
+	})
+	lista = append(lista, Retangulo{
+		Altura: 2,
+		Largura: 3,
+	})
+	lista = append(lista, "uma string é uma ")
+
+	for _, valor := range lista {
+		if v, is := valor.(string); is {
+			fmt.Println(v + "string")
+		} else if v, is := valor.(Circulo); is {
+			fmt.Println(v, "circulo")
+		} else {
+			fmt.Println(valor)
+		}
+	}
 }
