@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func main2() {
 	/*
 		endereco := model.Endereco{
 			Rua:    "Rua",
