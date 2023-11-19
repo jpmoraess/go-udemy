@@ -22,7 +22,11 @@ func reverse2(slice []string) []string {
 	return newStrings
 }
 
-func reverseGenerics[T int | string](slice []T) []T {
+type AcceptedTypes interface { // constraint
+	int | string
+}
+
+func reverseGenerics[T AcceptedTypes](slice []T) []T {
 	length := len(slice) - 1
 	newSlice := make([]T, len(slice))
 	for i := 0; i < len(slice); i++ {
