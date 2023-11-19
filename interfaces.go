@@ -3,7 +3,9 @@ package main
 import (
 	"fmt"
 	"math"
+	"errors"
 )
+
 
 type Geometria interface {
 	area() float64
@@ -39,21 +41,32 @@ func ExibeGeometria(g Geometria) {
 	fmt.Println(g.area())
 }
 
+func ExibeError(err error) {
+	fmt.Println(err.Error())
+}
+
+type ProblemaDeNetwork struct {
+	Rede bool
+	Hardware bool
+}
+
+func (p ProblemaDeNetwork) Error() string {
+	if p.Rede {
+		return "problema de rede"
+	} else if p.Hardware {
+		return "problema de hardware"
+	} else {
+		return "outro problema"
+	}
+}
+
 func main() {
-	fmt.Println("Inicializando...")
+	ExibeError(errors.New("error"))
 
-	retangulo := Retangulo{
-		Largura: 1,
-		Altura: 2,
+	p := ProblemaDeNetwork{
+		Rede: true,
+		Hardware: false,
 	}
 
-	circulo := Circulo{
-		Radius: 3,
-	}
-
-	//ExibeAreaRetangulo(retangulo)
-	//ExibeAreaCirculo(circulo)
-
-	ExibeGeometria(circulo)
-	ExibeGeometria(retangulo)
+	ExibeError(p)
 }
